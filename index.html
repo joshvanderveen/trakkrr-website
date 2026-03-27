@@ -3,19 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trakkrr - Specialist Machine Visibility & Telemetry Platform</title>
-  <meta name="description" content="Trakkrr gives multi-machine operators live visibility into asset location, usage, and machine telemetry through direct hardware integration.">
+  <title>Trakkrr - Machine Visibility & Telemetry Platform</title>
+  <meta name="description" content="Trakkrr connects directly to your machines and turns raw data into operational visibility. Works for a single machine. Shines across a fleet.">
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
+
   <!-- Navigation -->
   <nav class="navbar" id="navbar">
     <div class="container nav-container">
       <a href="#" class="logo">
-        <span class="logo-icon">&#9678;</span> Trakkrr
+        <svg class="logo-mark" width="32" height="32" viewBox="0 0 32 32" fill="none">
+          <rect x="2" y="2" width="28" height="28" rx="6" stroke="currentColor" stroke-width="2.5"/>
+          <circle cx="10" cy="16" r="3" fill="currentColor"/>
+          <circle cx="22" cy="10" r="3" fill="currentColor"/>
+          <circle cx="22" cy="22" r="3" fill="currentColor"/>
+          <line x1="12.5" y1="14.5" x2="19.5" y2="10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="12.5" y1="17.5" x2="19.5" y2="21.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <span>Trakkrr</span>
       </a>
       <ul class="nav-links" id="nav-links">
         <li><a href="#features">Features</a></li>
@@ -30,416 +39,416 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
+  <!-- Hero -->
   <header class="hero">
+    <div class="hero-glow"></div>
     <div class="container">
-      <div class="hero-content">
-        <div class="hero-badge">More Than GPS Tracking</div>
-        <h1>One cloud view of your machines: location, activity, history, and machine data.</h1>
-        <p class="hero-sub">Trakkrr gives multi-machine operators live visibility into asset location, usage, and machine telemetry through direct hardware integration.</p>
+      <div class="hero-inner">
+        <p class="hero-eyebrow">Hardware-integrated machine telemetry</p>
+        <h1>Know what your machines<br>are actually doing.</h1>
+        <p class="hero-sub">Trakkrr connects directly to your machine's own systems and turns raw telemetry into clear, practical visibility. Location, usage, runtime, history, and machine-level data &mdash; in one place.</p>
+        <p class="hero-note">Works for a single machine. Shines across a fleet.</p>
         <div class="hero-actions">
           <a href="#contact" class="btn btn-primary btn-lg">Request a Demo</a>
-          <a href="#how-it-works" class="btn btn-outline btn-lg">See How It Works</a>
-        </div>
-        <div class="hero-stats">
-          <div class="stat">
-            <span class="stat-icon">&#9673;</span>
-            <div>
-              <strong>Real-Time Location</strong>
-              <span>Live GPS tracking across your fleet</span>
-            </div>
-          </div>
-          <div class="stat">
-            <span class="stat-icon">&#9881;</span>
-            <div>
-              <strong>Machine Telemetry</strong>
-              <span>CAN & Modbus integration</span>
-            </div>
-          </div>
-          <div class="stat">
-            <span class="stat-icon">&#9776;</span>
-            <div>
-              <strong>Usage History</strong>
-              <span>Complete operational logging</span>
-            </div>
-          </div>
+          <a href="#how-it-works" class="btn btn-ghost btn-lg">How It Works</a>
         </div>
       </div>
-      <div class="hero-visual">
-        <div class="dashboard-preview">
-          <div class="dash-header">
-            <div class="dash-dots"><span></span><span></span><span></span></div>
-            <span class="dash-title">Fleet Dashboard</span>
+    </div>
+    <div class="hero-data-strip">
+      <div class="container">
+        <div class="strip-items">
+          <div class="strip-item">
+            <span class="strip-label">Location</span>
+            <span class="strip-dot live"></span>
+            <span class="strip-value">Live</span>
           </div>
-          <div class="dash-body">
-            <div class="dash-map">
-              <div class="map-pin pin-1"><span class="pin-pulse"></span></div>
-              <div class="map-pin pin-2"><span class="pin-pulse"></span></div>
-              <div class="map-pin pin-3"><span class="pin-pulse"></span></div>
-              <div class="map-pin pin-4"><span class="pin-pulse"></span></div>
-              <div class="map-grid"></div>
-            </div>
-            <div class="dash-sidebar">
-              <div class="dash-card">
-                <span class="card-label">Active Machines</span>
-                <span class="card-value green">12</span>
-              </div>
-              <div class="dash-card">
-                <span class="card-label">Idle</span>
-                <span class="card-value amber">3</span>
-              </div>
-              <div class="dash-card">
-                <span class="card-label">Needs Attention</span>
-                <span class="card-value red">1</span>
-              </div>
-              <div class="dash-card">
-                <span class="card-label">Avg Runtime</span>
-                <span class="card-value">6.4h</span>
-              </div>
-            </div>
+          <div class="strip-divider"></div>
+          <div class="strip-item">
+            <span class="strip-label">Runtime</span>
+            <span class="strip-value">6.4h today</span>
+          </div>
+          <div class="strip-divider"></div>
+          <div class="strip-item">
+            <span class="strip-label">Status</span>
+            <span class="strip-value status-active">Active</span>
+          </div>
+          <div class="strip-divider"></div>
+          <div class="strip-item">
+            <span class="strip-label">Next Service</span>
+            <span class="strip-value">42h remaining</span>
+          </div>
+          <div class="strip-divider"></div>
+          <div class="strip-item">
+            <span class="strip-label">Telemetry</span>
+            <span class="strip-value">Streaming</span>
           </div>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- Problems Section -->
-  <section class="problems" id="problems">
+  <!-- Value Statement -->
+  <section class="value-statement">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">The Problem</span>
-        <h2>Running a fleet shouldn't mean flying blind</h2>
-        <p>Most multi-machine operators face the same daily frustrations.</p>
-      </div>
-      <div class="problems-grid">
-        <div class="problem-card">
-          <div class="problem-icon">?</div>
-          <h3>No fleet overview</h3>
-          <p>No single view of what machines you have, where they are, whether they're active, and what condition they're in.</p>
+      <div class="value-grid">
+        <div class="value-left">
+          <h2>Most tracking stops at a dot on a map.</h2>
         </div>
-        <div class="problem-card">
-          <div class="problem-icon">&#9742;</div>
-          <h3>Phone-call operations</h3>
-          <p>Relying on calls, texts, and guesswork to understand equipment status across sites and crews.</p>
-        </div>
-        <div class="problem-card">
-          <div class="problem-icon">&#9888;</div>
-          <h3>Underused assets</h3>
-          <p>Machines left idle, misplaced, or duplicated because there's no visibility into location and usage.</p>
-        </div>
-        <div class="problem-card">
-          <div class="problem-icon">&#9211;</div>
-          <h3>Downtime surprises</h3>
-          <p>Service planning suffers when you can't see usage hours, patterns, or signals from the machine.</p>
-        </div>
-        <div class="problem-card">
-          <div class="problem-icon">&#128196;</div>
-          <h3>No history trail</h3>
-          <p>No reliable logs of where a machine has been, how it's been used, or what issues have occurred.</p>
-        </div>
-        <div class="problem-card">
-          <div class="problem-icon">&#8595;</div>
-          <h3>Generic trackers fall short</h3>
-          <p>Most tracking products stop at location. Your specialist machines need richer data and more relevant insight.</p>
+        <div class="value-right">
+          <p>Your machines produce data. Trakkrr reads it directly from the source &mdash; through whatever interface your machine supports &mdash; and turns it into something you can actually use. Not just where your machine is, but what it's doing, how hard it's working, and what needs your attention.</p>
+          <p>One machine or fifty. Same clarity.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Features Section -->
+  <!-- Features -->
   <section class="features" id="features">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Platform</span>
-        <h2>Everything you need to run your fleet with confidence</h2>
-        <p>Five pillars of operational visibility, from location to machine-level intelligence.</p>
+      <div class="section-intro">
+        <span class="section-label">What You Get</span>
+        <h2>Five layers of machine visibility</h2>
       </div>
-      <div class="features-grid">
-        <div class="feature-card feature-highlight">
-          <div class="feature-number">01</div>
-          <h3>Visibility</h3>
-          <p>Know where every machine is, which are active or idle, and your fleet status at a glance. Stop wasting time chasing information.</p>
-          <ul class="feature-list">
-            <li>Live location tracking</li>
-            <li>Fleet overview dashboard</li>
-            <li>Active/idle status</li>
-            <li>Geofence alerts</li>
-          </ul>
+
+      <div class="feature-blocks">
+        <div class="feature-block fb-large">
+          <span class="fb-number">01</span>
+          <div class="fb-content">
+            <h3>Live Visibility</h3>
+            <p>See where each machine is, whether it's running, and its current state. One screen, no guesswork. Useful for a single unit. Transformative across a fleet.</p>
+            <div class="fb-details">
+              <span>Real-time location</span>
+              <span>Active / idle / offline status</span>
+              <span>Geofence alerts</span>
+              <span>Fleet-wide overview</span>
+            </div>
+          </div>
         </div>
-        <div class="feature-card">
-          <div class="feature-number">02</div>
+
+        <div class="feature-block">
+          <span class="fb-number">02</span>
           <h3>Usage & Metrics</h3>
-          <p>Understand how machines are actually being used. Compare utilization, identify waste, and support better planning.</p>
-          <ul class="feature-list">
-            <li>Runtime monitoring</li>
-            <li>Utilization reporting</li>
-            <li>Activity comparison</li>
-            <li>Allocation insights</li>
-          </ul>
+          <p>Understand how machines are actually being used. Runtime hours, utilization patterns, and activity comparisons that help you plan better and waste less.</p>
+          <div class="fb-details">
+            <span>Runtime monitoring</span>
+            <span>Utilization reporting</span>
+            <span>Activity comparison</span>
+          </div>
         </div>
-        <div class="feature-card">
-          <div class="feature-number">03</div>
+
+        <div class="feature-block">
+          <span class="fb-number">03</span>
           <h3>Machine Integration</h3>
-          <p>Go beyond GPS with direct hardware integration. Capture richer data through CAN and Modbus interfaces.</p>
-          <ul class="feature-list">
-            <li>CAN bus integration</li>
-            <li>Modbus support</li>
-            <li>Machine-specific profiles</li>
-            <li>Tailored monitoring</li>
-          </ul>
+          <p>Trakkrr connects directly to your machine's own data systems. Whatever interface your equipment uses, we read the signals that matter and translate them into clear operational insight.</p>
+          <div class="fb-details">
+            <span>Direct hardware connection</span>
+            <span>Machine-specific data profiles</span>
+            <span>Tailored telemetry views</span>
+          </div>
         </div>
-        <div class="feature-card">
-          <div class="feature-number">04</div>
+
+        <div class="feature-block">
+          <span class="fb-number">04</span>
           <h3>Logging & History</h3>
-          <p>Build a usable record of machine behavior. Track history, support diagnostics, and provide evidence when needed.</p>
-          <ul class="feature-list">
-            <li>Complete event history</li>
-            <li>Maintenance logs</li>
-            <li>Accountability trail</li>
-            <li>Service records</li>
-          </ul>
+          <p>Every machine builds a record. Where it's been, how it's been used, what events occurred. Useful for service planning, accountability, and operational decisions.</p>
+          <div class="fb-details">
+            <span>Complete event history</span>
+            <span>Maintenance records</span>
+            <span>Service interval tracking</span>
+          </div>
         </div>
-        <div class="feature-card">
-          <div class="feature-number">05</div>
-          <h3>Practical Support</h3>
-          <p>Fast onboarding, less friction, and responsive support. Trakkrr is built to be useful, not just technically capable.</p>
-          <ul class="feature-list">
-            <li>Guided onboarding</li>
-            <li>Installation support</li>
-            <li>Responsive helpdesk</li>
-            <li>Training included</li>
-          </ul>
+
+        <div class="feature-block">
+          <span class="fb-number">05</span>
+          <h3>Hands-On Support</h3>
+          <p>We handle onboarding, installation support, and ongoing questions. Trakkrr is built to be commercially useful, not just technically impressive.</p>
+          <div class="fb-details">
+            <span>Guided setup</span>
+            <span>Installation support</span>
+            <span>Responsive helpdesk</span>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- How It Works Section -->
+  <!-- Scale Statement -->
+  <section class="scale-statement">
+    <div class="container">
+      <div class="scale-inner">
+        <div class="scale-line"></div>
+        <div class="scale-content">
+          <div class="scale-item">
+            <h3>1 machine</h3>
+            <p>Full visibility into location, usage, and machine data. Know exactly what your asset is doing.</p>
+          </div>
+          <div class="scale-item">
+            <h3>5&ndash;15 machines</h3>
+            <p>Compare utilization, spot idle assets, and coordinate allocation across sites and crews.</p>
+          </div>
+          <div class="scale-item">
+            <h3>50+ machines</h3>
+            <p>Fleet-wide operational intelligence. Custom reporting, volume pricing, and dedicated support.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
   <section class="how-it-works" id="how-it-works">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">How It Works</span>
-        <h2>From install to insight in three steps</h2>
+      <div class="section-intro">
+        <span class="section-label">How It Works</span>
+        <h2>From hardware to insight</h2>
       </div>
-      <div class="steps">
-        <div class="step">
-          <div class="step-number">1</div>
-          <div class="step-content">
-            <h3>Install the hardware</h3>
-            <p>Our rugged device connects directly to your machine's systems. Support for CAN, Modbus, and standard interfaces means deeper data from day one.</p>
+      <div class="steps-horizontal">
+        <div class="step-h">
+          <div class="step-h-marker">
+            <span>1</span>
           </div>
+          <h3>We install the hardware</h3>
+          <p>A rugged Trakkrr device connects directly to your machine. It reads from the machine's own data interfaces &mdash; pulling location, telemetry, and operational signals.</p>
         </div>
-        <div class="step-line"></div>
-        <div class="step">
-          <div class="step-number">2</div>
-          <div class="step-content">
-            <h3>Connect to the cloud</h3>
-            <p>Each device streams location, usage, and telemetry data to your secure Trakkrr dashboard. Real-time visibility across your entire fleet.</p>
+        <div class="step-h-connector"></div>
+        <div class="step-h">
+          <div class="step-h-marker">
+            <span>2</span>
           </div>
+          <h3>Data streams to the cloud</h3>
+          <p>Each device sends real-time data to your secure Trakkrr dashboard. Location, usage, machine state, and event data &mdash; continuously updated.</p>
         </div>
-        <div class="step-line"></div>
-        <div class="step">
-          <div class="step-number">3</div>
-          <div class="step-content">
-            <h3>Monitor and control</h3>
-            <p>See all your machines in one view. Track usage, get alerts, plan maintenance, and make better decisions with real operational data.</p>
+        <div class="step-h-connector"></div>
+        <div class="step-h">
+          <div class="step-h-marker">
+            <span>3</span>
           </div>
+          <h3>You see what matters</h3>
+          <p>Track individual machines or compare across your entire fleet. Get alerts, plan maintenance, review history, and make decisions with real data.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Pricing Section -->
+  <!-- Pricing -->
   <section class="pricing" id="pricing">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Pricing</span>
-        <h2>Simple, scalable pricing that grows with your fleet</h2>
-        <p>Choose the tier that matches how you want to monitor your machines. All plans include hardware, cloud access, and support.</p>
+      <div class="section-intro">
+        <span class="section-label">Pricing</span>
+        <h2>Straightforward pricing, no lock-in</h2>
+        <p class="section-desc">Hardware is a one-time cost. Software is per machine, per month. Start with one machine or outfit a whole fleet.</p>
       </div>
+
       <div class="pricing-grid">
         <div class="price-card">
-          <div class="price-tier">Track</div>
-          <div class="price-desc">Core machine visibility</div>
-          <div class="price-amount">
-            <span class="currency">AUD $</span><span class="amount">35</span><span class="period">/machine/mo</span>
+          <div class="pc-header">
+            <h3>Track</h3>
+            <p>Core visibility</p>
           </div>
-          <div class="price-note">From $29/machine/mo at scale</div>
-          <ul class="price-features">
-            <li>Machine overview dashboard</li>
+          <div class="pc-price">
+            <span class="pc-currency">AUD</span>
+            <span class="pc-amount">$35</span>
+            <span class="pc-period">/machine/mo</span>
+          </div>
+          <p class="pc-scale">From $29/mo at 15+ machines</p>
+          <ul class="pc-features">
             <li>Live location tracking</li>
+            <li>Machine overview dashboard</li>
             <li>Geofence & movement alerts</li>
-            <li>Machine status basics</li>
-            <li>Logging & history</li>
+            <li>Basic machine status</li>
+            <li>Event logging & history</li>
             <li>Standard support</li>
           </ul>
           <a href="#contact" class="btn btn-outline btn-block">Get Started</a>
-          <div class="price-best">Best for fleet visibility & location control</div>
+          <p class="pc-fit">Best for visibility and location control</p>
         </div>
-        <div class="price-card price-popular">
-          <div class="popular-badge">Most Popular</div>
-          <div class="price-tier">Monitor</div>
-          <div class="price-desc">Operational insight & metrics</div>
-          <div class="price-amount">
-            <span class="currency">AUD $</span><span class="amount">60</span><span class="period">/machine/mo</span>
+
+        <div class="price-card pc-featured">
+          <div class="pc-badge">Recommended</div>
+          <div class="pc-header">
+            <h3>Monitor</h3>
+            <p>Operational insight</p>
           </div>
-          <div class="price-note">From $49/machine/mo at scale</div>
-          <ul class="price-features">
+          <div class="pc-price">
+            <span class="pc-currency">AUD</span>
+            <span class="pc-amount">$60</span>
+            <span class="pc-period">/machine/mo</span>
+          </div>
+          <p class="pc-scale">From $49/mo at 15+ machines</p>
+          <ul class="pc-features">
             <li>Everything in Track, plus:</li>
             <li>Runtime & activity metrics</li>
             <li>Utilization reporting</li>
-            <li>Maintenance reminders</li>
-            <li>Richer dashboards</li>
-            <li>Enhanced event history</li>
+            <li>Maintenance triggers</li>
+            <li>Enhanced dashboards</li>
+            <li>Richer event history</li>
           </ul>
           <a href="#contact" class="btn btn-primary btn-block">Get Started</a>
-          <div class="price-best">Best for uptime, utilization & service planning</div>
+          <p class="pc-fit">Best for uptime, utilization & service planning</p>
         </div>
+
         <div class="price-card">
-          <div class="price-tier">Integrate</div>
-          <div class="price-desc">Specialist machine intelligence</div>
-          <div class="price-amount">
-            <span class="currency">AUD $</span><span class="amount">95</span><span class="period">/machine/mo</span>
+          <div class="pc-header">
+            <h3>Integrate</h3>
+            <p>Deep machine intelligence</p>
           </div>
-          <div class="price-note">From $78/machine/mo at scale</div>
-          <ul class="price-features">
+          <div class="pc-price">
+            <span class="pc-currency">AUD</span>
+            <span class="pc-amount">$95</span>
+            <span class="pc-period">/machine/mo</span>
+          </div>
+          <p class="pc-scale">From $78/mo at 15+ machines</p>
+          <ul class="pc-features">
             <li>Everything in Monitor, plus:</li>
             <li>Advanced telemetry ingestion</li>
-            <li>Machine-specific profiles</li>
-            <li>CAN/Modbus data visibility</li>
-            <li>Custom machine-state views</li>
+            <li>Machine-specific data profiles</li>
+            <li>Deep machine-state visibility</li>
+            <li>Custom telemetry views</li>
             <li>Priority support</li>
           </ul>
           <a href="#contact" class="btn btn-outline btn-block">Get Started</a>
-          <div class="price-best">Best for specialist machines with rich telemetry</div>
+          <p class="pc-fit">Best for machines with rich telemetry data</p>
         </div>
       </div>
-      <div class="pricing-extras">
-        <div class="extra">
+
+      <div class="pricing-notes">
+        <div class="pn-item">
           <strong>Hardware</strong>
-          <span>One-time per device. Priced separately to keep your SaaS costs transparent.</span>
+          <span>One-time cost per device, quoted separately. No hidden lease or bundling.</span>
         </div>
-        <div class="extra">
+        <div class="pn-item">
           <strong>Onboarding</strong>
-          <span>Standard setup included. Custom onboarding available for larger fleets.</span>
+          <span>Standard setup included. Custom onboarding for larger deployments.</span>
         </div>
-        <div class="extra">
-          <strong>Volume Discounts</strong>
-          <span>Fleets of 5+ machines receive scale pricing. 50+ machines get custom quotes.</span>
+        <div class="pn-item">
+          <strong>50+ machines?</strong>
+          <span>Custom pricing with dedicated account support. Get in touch.</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Industries Section -->
+  <!-- Industries -->
   <section class="industries" id="industries">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Industries</span>
-        <h2>Built for specialist machine operators</h2>
-        <p>Trakkrr works wherever businesses run multiple machines across sites, crews, or customers.</p>
+      <div class="section-intro">
+        <span class="section-label">Industries</span>
+        <h2>Built for specialist machines</h2>
+        <p class="section-desc">Trakkrr works wherever machines produce data worth understanding.</p>
       </div>
-      <div class="industries-grid">
-        <div class="industry-card">
-          <div class="industry-icon">&#9881;</div>
-          <h3>Floor Preparation & Polishing</h3>
-          <p>Track grinders, polishers, and prep equipment across jobs and crews.</p>
+
+      <div class="industries-list">
+        <div class="ind-item">
+          <div class="ind-marker"></div>
+          <div class="ind-content">
+            <h3>Floor Preparation & Polishing</h3>
+            <p>Grinders, polishers, and prep equipment across jobs and crews.</p>
+          </div>
         </div>
-        <div class="industry-card">
-          <div class="industry-icon">&#9883;</div>
-          <h3>Pumps & Compressors</h3>
-          <p>Monitor runtime, pressure data, and service intervals across distributed pump fleets.</p>
+        <div class="ind-item">
+          <div class="ind-marker"></div>
+          <div class="ind-content">
+            <h3>Pumps & Compressors</h3>
+            <p>Runtime, pressure data, and service intervals across distributed fleets.</p>
+          </div>
         </div>
-        <div class="industry-card">
-          <div class="industry-icon">&#9889;</div>
-          <h3>Generators & Power Systems</h3>
-          <p>Track output, fuel status, and usage patterns to optimize power asset deployment.</p>
+        <div class="ind-item">
+          <div class="ind-marker"></div>
+          <div class="ind-content">
+            <h3>Generators & Power Systems</h3>
+            <p>Output, fuel, and usage patterns to optimise power asset deployment.</p>
+          </div>
         </div>
-        <div class="industry-card">
-          <div class="industry-icon">&#9874;</div>
-          <h3>Specialty Contractors</h3>
-          <p>Any contractor with 5+ specialist machines moving between sites and needing better oversight.</p>
+        <div class="ind-item">
+          <div class="ind-marker"></div>
+          <div class="ind-content">
+            <h3>Specialty Contractors</h3>
+            <p>Any operator with specialist machines moving between sites.</p>
+          </div>
         </div>
-        <div class="industry-card">
-          <div class="industry-icon">&#8634;</div>
-          <h3>Equipment Rental</h3>
-          <p>Know where rented assets are, how they're used, and when they need service or return.</p>
+        <div class="ind-item">
+          <div class="ind-marker"></div>
+          <div class="ind-content">
+            <h3>Equipment Rental</h3>
+            <p>Asset location, usage verification, and service timing across customer sites.</p>
+          </div>
         </div>
-        <div class="industry-card">
-          <div class="industry-icon">&#9733;</div>
-          <h3>Industrial Field Equipment</h3>
-          <p>Gain operational visibility across any fleet of telemetry-capable field machines.</p>
+        <div class="ind-item">
+          <div class="ind-marker"></div>
+          <div class="ind-content">
+            <h3>Industrial Field Equipment</h3>
+            <p>Any telemetry-capable machine fleet where visibility creates value.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Comparison Section -->
+  <!-- Comparison -->
   <section class="comparison">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Why Trakkrr</span>
-        <h2>More than GPS. Simpler than enterprise.</h2>
-        <p>Trakkrr sits between cheap GPS trackers and bloated enterprise telematics platforms.</p>
+      <div class="section-intro">
+        <span class="section-label">Why Trakkrr</span>
+        <h2>More than GPS. Less than enterprise bloat.</h2>
       </div>
       <div class="comparison-table-wrap">
         <table class="comparison-table">
           <thead>
             <tr>
               <th></th>
-              <th>Generic GPS Trackers</th>
-              <th class="highlight">Trakkrr</th>
+              <th>Generic GPS</th>
+              <th class="col-highlight">Trakkrr</th>
               <th>Enterprise Telematics</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>Location tracking</td>
-              <td>&#10003;</td>
-              <td class="highlight">&#10003;</td>
-              <td>&#10003;</td>
+              <td class="check">&#10003;</td>
+              <td class="col-highlight check">&#10003;</td>
+              <td class="check">&#10003;</td>
             </tr>
             <tr>
               <td>Machine telemetry</td>
-              <td>&#10007;</td>
-              <td class="highlight">&#10003;</td>
-              <td>&#10003;</td>
+              <td class="cross">&#10005;</td>
+              <td class="col-highlight check">&#10003;</td>
+              <td class="check">&#10003;</td>
             </tr>
             <tr>
-              <td>CAN / Modbus integration</td>
-              <td>&#10007;</td>
-              <td class="highlight">&#10003;</td>
-              <td>Varies</td>
+              <td>Direct hardware integration</td>
+              <td class="cross">&#10005;</td>
+              <td class="col-highlight check">&#10003;</td>
+              <td class="muted">Varies</td>
             </tr>
             <tr>
               <td>Specialist machine focus</td>
-              <td>&#10007;</td>
-              <td class="highlight">&#10003;</td>
-              <td>&#10007;</td>
+              <td class="cross">&#10005;</td>
+              <td class="col-highlight check">&#10003;</td>
+              <td class="cross">&#10005;</td>
             </tr>
             <tr>
               <td>Simple to deploy</td>
-              <td>&#10003;</td>
-              <td class="highlight">&#10003;</td>
-              <td>&#10007;</td>
+              <td class="check">&#10003;</td>
+              <td class="col-highlight check">&#10003;</td>
+              <td class="cross">&#10005;</td>
             </tr>
             <tr>
               <td>Usage & utilization insight</td>
-              <td>&#10007;</td>
-              <td class="highlight">&#10003;</td>
-              <td>&#10003;</td>
+              <td class="cross">&#10005;</td>
+              <td class="col-highlight check">&#10003;</td>
+              <td class="check">&#10003;</td>
             </tr>
             <tr>
-              <td>Practical for SMEs</td>
-              <td>&#10003;</td>
-              <td class="highlight">&#10003;</td>
-              <td>&#10007;</td>
+              <td>Practical for small operators</td>
+              <td class="check">&#10003;</td>
+              <td class="col-highlight check">&#10003;</td>
+              <td class="cross">&#10005;</td>
             </tr>
             <tr>
               <td>Maintenance planning</td>
-              <td>&#10007;</td>
-              <td class="highlight">&#10003;</td>
-              <td>&#10003;</td>
+              <td class="cross">&#10005;</td>
+              <td class="col-highlight check">&#10003;</td>
+              <td class="check">&#10003;</td>
             </tr>
           </tbody>
         </table>
@@ -447,12 +456,14 @@
     </div>
   </section>
 
-  <!-- CTA / Contact Section -->
+  <!-- CTA / Contact -->
   <section class="cta" id="contact">
     <div class="container">
-      <div class="cta-content">
-        <h2>Ready to see your machines clearly?</h2>
-        <p>Get a live demo of Trakkrr tailored to your fleet. No obligation, no generic sales deck.</p>
+      <div class="cta-inner">
+        <div class="cta-text">
+          <h2>See what your machines are telling you.</h2>
+          <p>Tell us about your equipment and we'll show you what Trakkrr looks like for your operation. No obligation.</p>
+        </div>
         <form class="cta-form" id="contact-form">
           <div class="form-row">
             <input type="text" placeholder="Your name" required>
@@ -464,7 +475,7 @@
           </div>
           <div class="form-row">
             <select>
-              <option value="" disabled selected>What type of machines?</option>
+              <option value="" disabled selected>Machine type</option>
               <option>Floor preparation / polishing</option>
               <option>Pumps / compressors</option>
               <option>Generators / power</option>
@@ -473,14 +484,14 @@
               <option>Other specialist equipment</option>
             </select>
             <select>
-              <option value="" disabled selected>Which plan interests you?</option>
+              <option value="" disabled selected>Plan interest</option>
               <option>Track - Core Visibility</option>
               <option>Monitor - Operational Insight</option>
-              <option>Integrate - Specialist Intelligence</option>
+              <option>Integrate - Deep Intelligence</option>
               <option>Not sure yet</option>
             </select>
           </div>
-          <textarea placeholder="Tell us about your fleet and what you're looking for..." rows="3"></textarea>
+          <textarea placeholder="Tell us about your machines and what you're looking for..." rows="3"></textarea>
           <button type="submit" class="btn btn-primary btn-lg">Request Your Demo</button>
         </form>
       </div>
@@ -492,8 +503,18 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="#" class="logo"><span class="logo-icon">&#9678;</span> Trakkrr</a>
-          <p>Specialist machine visibility and telemetry for multi-machine operators.</p>
+          <a href="#" class="logo">
+            <svg class="logo-mark" width="24" height="24" viewBox="0 0 32 32" fill="none">
+              <rect x="2" y="2" width="28" height="28" rx="6" stroke="currentColor" stroke-width="2.5"/>
+              <circle cx="10" cy="16" r="3" fill="currentColor"/>
+              <circle cx="22" cy="10" r="3" fill="currentColor"/>
+              <circle cx="22" cy="22" r="3" fill="currentColor"/>
+              <line x1="12.5" y1="14.5" x2="19.5" y2="10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="12.5" y1="17.5" x2="19.5" y2="21.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            <span>Trakkrr</span>
+          </a>
+          <p>Machine visibility and telemetry for operators who need more than GPS.</p>
         </div>
         <div class="footer-links">
           <h4>Platform</h4>
@@ -510,13 +531,6 @@
             <li><a href="#contact">Contact</a></li>
             <li><a href="#">Privacy Policy</a></li>
             <li><a href="#">Terms of Service</a></li>
-          </ul>
-        </div>
-        <div class="footer-links">
-          <h4>Get Started</h4>
-          <ul>
-            <li><a href="#contact">Request a Demo</a></li>
-            <li><a href="#pricing">View Pricing</a></li>
           </ul>
         </div>
       </div>

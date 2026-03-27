@@ -1,10 +1,10 @@
-// Navbar scroll effect
+// Navbar scroll
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
   navbar.classList.toggle('scrolled', window.scrollY > 40);
 });
 
-// Mobile menu toggle
+// Mobile menu
 const mobileToggle = document.getElementById('mobile-toggle');
 const navLinks = document.getElementById('nav-links');
 
@@ -12,14 +12,11 @@ mobileToggle.addEventListener('click', () => {
   navLinks.classList.toggle('open');
 });
 
-// Close mobile menu on link click
 navLinks.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    navLinks.classList.remove('open');
-  });
+  link.addEventListener('click', () => navLinks.classList.remove('open'));
 });
 
-// Smooth scroll for anchor links
+// Smooth scroll
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', (e) => {
     const target = document.querySelector(anchor.getAttribute('href'));
@@ -32,16 +29,16 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// Contact form handler
+// Contact form
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
   contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const btn = contactForm.querySelector('button[type="submit"]');
     const originalText = btn.textContent;
-    btn.textContent = 'Sent! We\'ll be in touch.';
+    btn.textContent = 'Sent! We\u2019ll be in touch.';
     btn.disabled = true;
-    btn.style.opacity = '0.7';
+    btn.style.opacity = '0.6';
     setTimeout(() => {
       btn.textContent = originalText;
       btn.disabled = false;
@@ -51,27 +48,26 @@ if (contactForm) {
   });
 }
 
-// Animate elements on scroll
-const observerOptions = {
-  threshold: 0.1,
-  rootMargin: '0px 0px -40px 0px'
-};
-
+// Scroll reveal
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      entry.target.style.opacity = '1';
-      entry.target.style.transform = 'translateY(0)';
+      entry.target.classList.add('revealed');
       observer.unobserve(entry.target);
     }
   });
-}, observerOptions);
+}, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
 
 document.querySelectorAll(
-  '.problem-card, .feature-card, .step, .price-card, .industry-card, .extra'
-).forEach(el => {
+  '.feature-block, .step-h, .price-card, .ind-item, .pn-item, .scale-item'
+).forEach((el, i) => {
   el.style.opacity = '0';
-  el.style.transform = 'translateY(24px)';
-  el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+  el.style.transform = 'translateY(20px)';
+  el.style.transition = `opacity 0.5s ease ${i % 3 * 0.08}s, transform 0.5s ease ${i % 3 * 0.08}s`;
   observer.observe(el);
 });
+
+// Add revealed class styles
+const style = document.createElement('style');
+style.textContent = '.revealed { opacity: 1 !important; transform: translateY(0) !important; }';
+document.head.appendChild(style);
